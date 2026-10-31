@@ -94,6 +94,11 @@ You pay a small fee per row written or read. See the **Pricing** tab for current
 - Google allows 60 write requests per minute per service account. The Actor batches rows, so most runs need only a few requests, and it waits automatically when the quota is reached.
 - Upsert reads the whole tab to find matching rows, so it works best for tabs under a few hundred thousand rows.
 
+## Works well with
+
+- **[Google Ads Transparency Scraper](https://apify.com/rsiddiq95/google-ads-transparency-scraper):** keep a live sheet of competitors' Google ads and ad copy (upsert by `creativeId`).
+- **[Google Trends Scraper](https://apify.com/rsiddiq95/google-trends-scraper):** log search interest for your keywords to a sheet every week.
+
 ## FAQ
 
 **Can I write formulas or dates?**
