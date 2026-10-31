@@ -84,6 +84,16 @@ In **Read** mode, each sheet row becomes a dataset item, using the header row as
 
 Nested objects become columns joined with `/`, the same as Apify's CSV export (`address/city`). Lists of plain values are joined with commas (`tags: "red, blue"`), and lists of objects are written as JSON text.
 
+## Use it from AI agents (Claude, ChatGPT, Cursor)
+
+AI assistants can run this Actor as a tool through [Apify's MCP server](https://docs.apify.com/platform/integrations/mcp). Add this server URL to any MCP client:
+
+```
+https://mcp.apify.com?tools=rsiddiq95/google-sheets-sync
+```
+
+Then just ask, for example: *"Read all rows from this public Google Sheet and summarise them: <sheet URL>."* Agent runs cost the same per result as runs from the console.
+
 ## Pricing
 
 You pay a small fee per row written or read. See the **Pricing** tab for current prices.
